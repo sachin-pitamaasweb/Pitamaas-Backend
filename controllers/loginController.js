@@ -33,7 +33,6 @@ const sendOtpEmail = async (email, otp) => {
 
 const login = async (req, res) => {
     const { email } = req.body;
-
     if (!email) {
         return res.status(400).send('Email is required');
     }
@@ -43,7 +42,7 @@ const login = async (req, res) => {
         let result = await pool.request()
             .input('email', sql.NVarChar, email)
             .query('SELECT * FROM clientsRecord WHERE email = @email');
-        
+
         if (result.recordset.length > 0) {
             const otp = Math.floor(100000 + Math.random() * 900000).toString();
 
@@ -52,12 +51,18 @@ const login = async (req, res) => {
 
             // Store OTP in in-memory store with expiration logic if needed
             setOtp(email, otp);
-
-            res.json({ success: true, message: 'OTP sent successfully' });
+            console.log(result.recordset[0].ClientID);
+            res.json({
+                result: result.recordset[0].ClientID,
+                success: true,  
+                message: 'OTP sent successfully'
+            });
         } else {
+            console.log('Email not found');
             res.status(404).send('Email not found');
         }
     } catch (err) {
+        console.log('err', err);
         res.status(500).send(err.message);
     }
 };
@@ -65,7 +70,7 @@ const login = async (req, res) => {
 
 const verifyOtp = async (req, res) => {
     const { email, code } = req.body;
-    if(!email || !code) {
+    if (!email || !code) {
         return res.status(400).json({ success: false, message: 'Email and code are required' });
     }
     const storedOtp = await getOtp(email);
