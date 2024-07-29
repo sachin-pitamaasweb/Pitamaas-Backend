@@ -122,7 +122,7 @@ const login = async (req, res) => {
 const getNonRepeatedClients = async (req, res) => {
     try {
         let pool = await sql.connect(config);
-        
+
         // Query to find non-repeated clients based on clientId
         let result = await pool.request()
             .query(`
@@ -330,6 +330,43 @@ const getIdeaUploaderByClientIdAndSocialAccount = async (req, res) => {
             .input('socialAccount', sql.VarChar, socialAccount)
             .query('SELECT * FROM IdeaUploader WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
 
+        if (result.recordset.length > 0) {
+            res.json({
+                data: result.recordset,
+                count: result.recordset.length,
+                success: true,
+                message: 'Data fetched successfully'
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: 'No data found'
+            })
+        }
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+};
+
+// get the idea uploader data by client id and SocialAccount and post id
+const getIdeaUploaderByClientIdAndSocialAccountAndPostId = async (req, res) => {
+    try {
+        const { clientId, socialAccount, postId } = req.body; // Extract clientId, socialAccount, and postId from request body
+
+        if (!clientId || !socialAccount || !postId) {
+            return res.status(400).json({
+                success: false,
+                message: 'clientId, socialAccount, and postId are required'
+            });
+        }
+
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('clientId', sql.Int, clientId)
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .input('postId', sql.Int, postId)
+            .query('SELECT * FROM IdeaUploader WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
         res.json({
             data: result.recordset,
             count: result.recordset.length,
@@ -357,5 +394,5 @@ module.exports = {
     getPannsByPlanId,
     getClientEnrollmentByClientId,
     getIdeaUploaderByClientIdAndSocialAccount,
-    
+    getIdeaUploaderByClientIdAndSocialAccountAndPostId
 };
