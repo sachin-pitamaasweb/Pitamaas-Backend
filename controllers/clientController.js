@@ -315,7 +315,7 @@ const getClientEnrollmentByClientId = async (req, res) => {
 // get idea uploader data by client id and SocialAccount
 const getIdeaUploaderByClientIdAndSocialAccount = async (req, res) => {
     try {
-        const { clientId, socialAccount } = req.body; // Extract clientId and socialAccount from request body
+        const { clientId, socialAccount,  } = req.body; // Extract clientId and socialAccount from request body
 
         if (!clientId || !socialAccount) {
             return res.status(400).json({
@@ -328,7 +328,12 @@ const getIdeaUploaderByClientIdAndSocialAccount = async (req, res) => {
         let result = await pool.request()
             .input('clientId', sql.Int, clientId)
             .input('socialAccount', sql.VarChar, socialAccount)
-            .query('SELECT * FROM IdeaUploader WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
+            .query(`
+                SELECT * FROM IdeaUploader WHERE ClientId = @clientId
+                 AND SocialAccount = @socialAccount AND
+                  UploadedFileStatus IS NULL
+                   AND CreativeStatus = 'Done'
+                `);
 
         if (result.recordset.length > 0) {
             res.json({
