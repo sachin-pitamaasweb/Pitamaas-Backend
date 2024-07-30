@@ -83,12 +83,18 @@ const generateCredentials = (clientId, socialAccount) => {
 };
 
 
+// Read the client credentials file once at startup
+let clientCredentials;
+try {
+    clientCredentials = JSON.parse(fs.readFileSync('client_credentials.json'));
+} catch (err) {
+    console.error('Error reading client credentials:', err.message);
+}
+
 const login = async (req, res) => {
     const { username, password } = req.body;
 
     try {
-        const clientCredentials = JSON.parse(fs.readFileSync('client_credentials.json'));
-
         const client = clientCredentials.find(c => c.credentials.username === username && c.credentials.password === password);
 
         if (!client) {
@@ -383,6 +389,127 @@ const getIdeaUploaderByClientIdAndSocialAccountAndPostId = async (req, res) => {
     }
 };
 
+// get the AddMonthlyAmount order by id desc 
+const getAddMonthlyAmount = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('orderId', sql.Int, req.params.orderId)
+            .query('SELECT * FROM AddMonthlyAmount ORDER BY id DESC');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+};
+
+
+// get the add-vouchar order by id desc 
+const getAddVouchar = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('orderId', sql.Int, req.params.orderId)
+            .query('SELECT * FROM AddVouchar ORDER BY id DESC');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+};
+
+const getClientEnrollmentByClientIdAndSocialAccount = async (req, res) => {
+    try {
+        const { clientId, socialAccount } = req.body; // Extract clientId and socialAccount from request body
+
+        if (!clientId || !socialAccount) {
+            return res.status(400).json({
+                success: false,
+                message: 'clientId and socialAccount are required'  
+            });
+        }
+
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('clientId', sql.Int, clientId)
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT * FROM ClientEnrollment WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }   
+}
+
+const getClientData = async (req, res) => {
+    try {
+        const { clientId, socialAccount } = req.body; // Extract clientId and socialAccount from request body
+
+        if (!clientId || !socialAccount) {
+            return res.status(400).json({
+                success: false,
+                message: 'clientId and socialAccount are required'  
+            });
+        }
+
+        let pool = await sql.connect(config);
+
+        // Fetch data from ClientEnrollment
+        let clientEnrollmentResult = await pool.request()
+            .input('clientId', sql.Int, clientId)
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT * FROM ClientEnrollment WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
+
+        // Fetch data from AddMonthlyAmount
+        let addMonthlyAmountResult = await pool.request()
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT * FROM AddMonthlyAmount WHERE SocialAccount = @socialAccount');
+
+        // Fetch data from AddVouchar
+        let addVoucharResult = await pool.request()
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT * FROM AddVouchar WHERE SocialAccount = @socialAccount');
+
+        // Combine data
+        let combinedData = {
+            clientEnrollment: clientEnrollmentResult.recordset,
+            addMonthlyAmount: addMonthlyAmountResult.recordset,
+            addVouchar: addVoucharResult.recordset
+        };
+
+        // Calculate total PaidAmount from clientEnrollment, Budget from addMonthlyAmount, and Amount from addVouchar
+        let totalPaidAmount = clientEnrollmentResult.recordset.reduce((sum, record) => sum + (record.PaidAmount || 0), 0);
+        let totalBudget = addMonthlyAmountResult.recordset.reduce((sum, record) => sum + (record.Budget || 0), 0);
+        let totalVoucharAmount = addVoucharResult.recordset.reduce((sum, record) => sum + (record.Amount || 0), 0);
+
+        res.json({
+            data: combinedData,
+            totals: {
+                totalPaidAmount,
+                totalBudget,
+                totalVoucharAmount
+            },
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }   
+};
+
+
 
 module.exports = {
     getClients,
@@ -399,5 +526,8 @@ module.exports = {
     getPannsByPlanId,
     getClientEnrollmentByClientId,
     getIdeaUploaderByClientIdAndSocialAccount,
-    getIdeaUploaderByClientIdAndSocialAccountAndPostId
+    getIdeaUploaderByClientIdAndSocialAccountAndPostId,
+    getAddMonthlyAmount,
+    getAddVouchar,
+    getClientData
 };

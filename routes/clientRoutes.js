@@ -14,7 +14,10 @@ const {
     getIdeaUploaderByClientIdAndSocialAccount,
     getActiveClients,
     login,
-    getIdeaUploaderByClientIdAndSocialAccountAndPostId
+    getIdeaUploaderByClientIdAndSocialAccountAndPostId,
+    getAddMonthlyAmount,
+    getAddVouchar,
+    getClientData,
 } = require('../controllers/clientController');
 
 const router = express.Router();
@@ -35,5 +38,8 @@ router.get('/get-plans-by-plan-id/:planId', getPannsByPlanId);
 router.get('/client-enrollment/:clientId', getClientEnrollmentByClientId);
 router.post('/idea-uploader-by-client-id-and-social-account', getIdeaUploaderByClientIdAndSocialAccount);
 router.post('/idea-uploader-by-client-id-and-social-account-and-post-id', getIdeaUploaderByClientIdAndSocialAccountAndPostId);
+router.get('/add-monthly-amount', getAddMonthlyAmount);
+router.get('/add-vouchar', getAddVouchar);
+router.post('/client-data', getClientData);
 
 module.exports = router;
