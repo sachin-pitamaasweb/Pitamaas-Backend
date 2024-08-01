@@ -1,5 +1,6 @@
 const sql = require('mssql');
 const fs = require('fs');
+const path = require('path');
 const config = require('../config/dbConfig');
 
 // Function to get all Clients
@@ -321,7 +322,7 @@ const getClientEnrollmentByClientId = async (req, res) => {
 // get idea uploader data by client id and SocialAccount
 const getIdeaUploaderByClientIdAndSocialAccount = async (req, res) => {
     try {
-        const { clientId, socialAccount,  } = req.body; // Extract clientId and socialAccount from request body
+        const { clientId, socialAccount, } = req.body; // Extract clientId and socialAccount from request body
 
         if (!clientId || !socialAccount) {
             return res.status(400).json({
@@ -433,7 +434,7 @@ const getClientEnrollmentByClientIdAndSocialAccount = async (req, res) => {
         if (!clientId || !socialAccount) {
             return res.status(400).json({
                 success: false,
-                message: 'clientId and socialAccount are required'  
+                message: 'clientId and socialAccount are required'
             });
         }
 
@@ -450,7 +451,7 @@ const getClientEnrollmentByClientIdAndSocialAccount = async (req, res) => {
         });
     } catch (err) {
         res.status(500).send(err.message);
-    }   
+    }
 }
 
 const getClientData = async (req, res) => {
@@ -460,7 +461,7 @@ const getClientData = async (req, res) => {
         if (!clientId || !socialAccount) {
             return res.status(400).json({
                 success: false,
-                message: 'clientId and socialAccount are required'  
+                message: 'clientId and socialAccount are required'
             });
         }
 
@@ -506,8 +507,388 @@ const getClientData = async (req, res) => {
         });
     } catch (err) {
         res.status(500).send(err.message);
-    }   
+    }
 };
+
+const staffDetials = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .query('SELECT * FROM stafdetails');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+}
+
+// get the staff details by id
+const getStaffDetailsById = async (req, res) => {
+    try {
+        const { id } = req.params;
+
+        if (!id) {
+            return res.status(400).json({
+                success: false,
+                message: 'id is required'
+            });
+        }
+
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('id', sql.Int, id)
+            .query('SELECT * FROM stafdetails WHERE StaffID = @id');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+}
+
+const domNotifications = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .query('SELECT * FROM DOMNotification');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+}
+
+const notificationsFilePath = path.join(__dirname, 'notifications.json');
+
+// Ensure notifications file exists and is an array
+const initializeNotificationsFile = () => {
+    if (!fs.existsSync(notificationsFilePath)) {
+        fs.writeFileSync(notificationsFilePath, JSON.stringify([]));
+    }
+};
+
+// Function to store notifications in JSON file
+const sendNotifications = async (recipients, notification) => {
+    initializeNotificationsFile();
+
+    try {
+        // Read the existing notifications
+        let notifications = JSON.parse(fs.readFileSync(notificationsFilePath, 'utf8'));
+
+        // Create a new notification entry
+        const newNotifications = recipients.map(recipient => ({
+            recipient,
+            clientId: notification.clientId,
+            designerId: notification.designerId,
+            campaignId: notification.postId,
+            campaignName: notification.campaignName,
+            keyManagerId: notification.keyManagerId,
+            subject: notification.subject,
+            message: notification.message,
+            timestamp: new Date().toISOString()
+        }));
+
+        // Append new notifications to the existing ones
+        notifications = notifications.concat(newNotifications);
+
+        // Write the updated notifications back to the file
+        fs.writeFileSync(notificationsFilePath, JSON.stringify(notifications, null, 2));
+
+        // Save notifications to the SQL table
+        let pool = await sql.connect(config);
+        for (const notification of newNotifications) {
+            await pool.request()
+                .input('recipient', sql.VarChar, notification.recipient)
+                .input('clientId', sql.Int, notification.clientId)
+                .input('designerId', sql.Int, notification.designerId)
+                .input('campaignId', sql.Int, notification.campaignId)
+                .input('campaignName', sql.VarChar, notification.campaignName)
+                .input('keyManagerId', sql.Int, notification.keyManagerId)
+                .input('subject', sql.VarChar, notification.subject)
+                .input('message', sql.VarChar, notification.message)
+                .input('timestamp', sql.DateTime, notification.timestamp)
+                .query('INSERT INTO DOMNotification (recipient, clientId, designerId, campaignId, campaignName, keyManagerId, subject, message, timestamp) VALUES (@recipient, @clientId, @designerId, @campaignId, @campaignName, @keyManagerId, @subject, @message, @timestamp)');
+        }
+
+        console.log('Notifications saved successfully');
+    } catch (error) {
+        console.error('Error saving notifications:', error.message);
+    }
+};
+
+// Example usage in the postApprovedByClient function
+const postApprovedByClient = async (req, res) => {
+    try {
+        const { clientId, socialAccount, postId, campaignName } = req.body;
+        console.log(clientId, socialAccount, postId);
+
+        if (!clientId || !socialAccount || !postId || !campaignName) {
+            return res.status(400).json({
+                success: false,
+                message: 'clientId, socialAccount, and postId are required'
+            });
+        }
+
+        let pool = await sql.connect(config);
+
+        // First, get Key Manager and Designer IDs
+        let staffResult = await pool.request()
+            .input('clientId', sql.Int, clientId)
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT KeyManager, Designer FROM ClientEnrollment WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
+
+        if (staffResult.recordset.length > 0) {
+            let { Designer, KeyManager } = staffResult.recordset[0];
+
+            // First, check the current status of the post
+            let postResult = await pool.request()
+                .input('clientId', sql.Int, clientId)
+                .input('socialAccount', sql.VarChar, socialAccount)
+                .input('postId', sql.Int, postId)
+                .query('SELECT UploadedFileStatus FROM IdeaUploader WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
+            if (postResult.recordset.length > 0) {
+                let currentStatus = postResult.recordset[0].UploadedFileStatus;
+
+                if (currentStatus === null) {
+                    // Update the status to 'Done'
+                    await pool.request()
+                        .input('clientId', sql.Int, clientId)
+                        .input('socialAccount', sql.VarChar, socialAccount)
+                        .input('postId', sql.Int, postId)
+                        .input('uploadedFileStatus', sql.VarChar, 'Done')
+                        .query('UPDATE IdeaUploader SET UploadedFileStatus = @uploadedFileStatus WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
+                    // Send notifications
+                    const notificationRecipients = [KeyManager, Designer];
+                    await sendNotifications(notificationRecipients, {
+                        clientId: clientId,
+                        postId: postId,
+                        designerId: Designer,
+                        keyManagerId: KeyManager,
+                        subject: 'Post Approved',
+                        message: `Campaign '${campaignName}' with Social Account '${socialAccount}' has been approved and status updated to 'Done'.`
+                    });
+
+                    return res.status(200).json({
+                        success: true,
+                        message: 'Post status updated to Done successfully and notifications saved'
+                    });
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: 'Post has already been updated or is not in a valid state for updating'
+                    });
+                }
+            } else {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Post not found'
+                });
+            }
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: 'Client enrollment not found'
+            });
+        }
+
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: 'Internal server error'
+        });
+    }
+}
+
+const postRejectedByClient = async (req, res) => {
+    try {
+        const { clientId, socialAccount, postId, campaignName, rejectReason } = req.body;
+        console.log(clientId, socialAccount, postId, campaignName, rejectReason);
+
+        if (!clientId || !socialAccount || !postId || !campaignName || !rejectReason) {
+            return res.status(400).json({
+                success: false,
+                message: 'clientId, socialAccount, and postId are required'
+            });
+        }
+
+        let pool = await sql.connect(config);
+
+        // First, get Key Manager and Designer IDs
+        let staffResult = await pool.request()
+            .input('clientId', sql.Int, clientId)
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT KeyManager, Designer FROM ClientEnrollment WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
+
+        if (staffResult.recordset.length > 0) {
+            let { Designer, KeyManager } = staffResult.recordset[0];
+
+            // First, check the current status of the post
+            let postResult = await pool.request()
+                .input('clientId', sql.Int, clientId)
+                .input('socialAccount', sql.VarChar, socialAccount)
+                .input('postId', sql.Int, postId)
+                .query('SELECT UploadedFileStatus FROM IdeaUploader WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
+            if (postResult.recordset.length > 0) {
+                let currentStatus = postResult.recordset[0].UploadedFileStatus;
+
+                if (currentStatus === null) {
+                    // Update the status to 'Done'
+                    await pool.request()
+                        .input('clientId', sql.Int, clientId)
+                        .input('socialAccount', sql.VarChar, socialAccount)
+                        .input('postId', sql.Int, postId)
+                        .input('uploadedFileStatus', sql.VarChar, 'rejected')
+                        .input('clientrejectionpost', sql.VarChar, rejectReason)
+                        .query('UPDATE IdeaUploader SET UploadedFileStatus = @uploadedFileStatus, clientrejectionpost = @clientrejectionpost WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
+                    // Send notifications
+                    const notificationRecipients = [KeyManager, Designer];
+                    await sendNotifications(notificationRecipients, {
+                        clientId: clientId,
+                        postId: postId,
+                        designerId: Designer,
+                        keyManagerId: KeyManager,
+                        subject: 'Post Approved',
+                        message: `Campaign '${campaignName}' with Social Account '${socialAccount}' has been rejected and status updated to 'rejected'.`
+                    });
+
+                    return res.status(200).json({
+                        success: true,
+                        message: 'Post status updated to Done successfully and notifications saved'
+                    });
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: 'Post has already been updated or is not in a valid state for updating'
+                    });
+                }
+            } else {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Post not found'
+                });
+            }
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: 'Client enrollment not found'
+            });
+        }
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
+            success: false,
+            message: 'Internal server error'
+        });
+    }
+};
+
+
+const postCorrectedByClient = async (req, res) => {
+    try {
+        const { clientId, socialAccount, postId, campaignName, correctionReason } = req.body;
+        console.log(clientId, socialAccount, postId, campaignName, correctionReason);
+
+        if (!clientId || !socialAccount || !postId || !campaignName || !correctionReason) {
+            return res.status(400).json({
+                success: false,
+                message: 'clientId, socialAccount, postId, campaignName, and correctionReason are required'
+            });
+        }
+
+        let pool = await sql.connect(config);
+
+        // First, get Key Manager and Designer IDs
+        let staffResult = await pool.request()
+            .input('clientId', sql.Int, clientId)
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT KeyManager, Designer FROM ClientEnrollment WHERE ClientId = @clientId AND SocialAccount = @socialAccount');
+
+        if (staffResult.recordset.length > 0) {
+            let { Designer, KeyManager } = staffResult.recordset[0];
+
+            // First, check the current status of the post
+            let postResult = await pool.request()
+                .input('clientId', sql.Int, clientId)
+                .input('socialAccount', sql.VarChar, socialAccount)
+                .input('postId', sql.Int, postId)
+                .query('SELECT UploadedFileStatus FROM IdeaUploader WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
+            if (postResult.recordset.length > 0) {
+                let currentStatus = postResult.recordset[0].UploadedFileStatus;
+
+                if (currentStatus === 'Done' || currentStatus === 'Rejected') {
+                    // Update the status to 'Corrected'
+                    await pool.request()
+                        .input('clientId', sql.Int, clientId)
+                        .input('socialAccount', sql.VarChar, socialAccount)
+                        .input('postId', sql.Int, postId)
+                        .input('uploadedFileStatus', sql.VarChar, 'correction')
+                        .input('correctionReason', sql.VarChar, correctionReason)
+                        .query('UPDATE IdeaUploader SET UploadedFileStatus = @uploadedFileStatus, clientcorrectionpost = @correctionReason WHERE ClientId = @clientId AND SocialAccount = @socialAccount AND Id = @postId');
+
+                    // Send notifications
+                    const notificationRecipients = [KeyManager, Designer];
+                    await sendNotifications(notificationRecipients, {
+                        clientId: clientId,
+                        postId: postId,
+                        designerId: Designer,
+                        keyManagerId: KeyManager,
+                        campaignName: campaignName,
+                        subject: 'Post Correction',
+                        message: `Campaign '${campaignName}' with Social Account '${socialAccount}' has been corrected. Reason for correction: '${correctionReason}'.`
+                    });
+
+                    return res.status(200).json({
+                        success: true,
+                        message: 'Post status updated to Corrected successfully and notifications saved'
+                    });
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: 'Post has not been completed or is not in a valid state for correction'
+                    });
+                }
+            } else {
+                return res.status(400).json({
+                    success: false,
+                    message: 'Post not found'
+                });
+            }
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: 'Client enrollment not found'
+            });
+        }
+
+    } catch (err) {
+        console.log(err);
+        res.status(500).json({
+            success: false,
+            message: 'Internal server error'
+        });
+    }
+};
+
+
+// Ensure notifications file exists on server start
+initializeNotificationsFile();
 
 
 
@@ -529,5 +910,11 @@ module.exports = {
     getIdeaUploaderByClientIdAndSocialAccountAndPostId,
     getAddMonthlyAmount,
     getAddVouchar,
-    getClientData
+    getClientData,
+    staffDetials,
+    getStaffDetailsById,
+    postApprovedByClient,
+    domNotifications,
+    postRejectedByClient,
+    postCorrectedByClient
 };

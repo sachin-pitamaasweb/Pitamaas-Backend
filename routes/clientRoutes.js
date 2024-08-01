@@ -18,6 +18,12 @@ const {
     getAddMonthlyAmount,
     getAddVouchar,
     getClientData,
+    staffDetials,
+    getStaffDetailsById,
+    postApprovedByClient,
+    domNotifications,
+    postRejectedByClient,
+    postCorrectedByClient
 } = require('../controllers/clientController');
 
 const router = express.Router();
@@ -41,5 +47,11 @@ router.post('/idea-uploader-by-client-id-and-social-account-and-post-id', getIde
 router.get('/add-monthly-amount', getAddMonthlyAmount);
 router.get('/add-vouchar', getAddVouchar);
 router.post('/client-data', getClientData);
+router.get('/staff-details', staffDetials);
+router.get('/staff-details/:id', getStaffDetailsById);
+router.post('/post-approved-by-client', postApprovedByClient);
+router.get('/dom-notifications', domNotifications);
+router.post('/post-reject-by-client', postRejectedByClient);
+
 
 module.exports = router;

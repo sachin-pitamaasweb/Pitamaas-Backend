@@ -1,0 +1,98 @@
+[
+  {
+    "recipient": 3327,
+    "subject": "Post Approved",
+    "message": "Post with ID 77642 has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T07:49:59.821Z"
+  },
+  {
+    "recipient": 2289,
+    "subject": "Post Approved",
+    "message": "Post with ID 77642 has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T07:49:59.821Z"
+  },
+  {
+    "recipient": 3327,
+    "subject": "Post Approved",
+    "message": "Post with ID 77650 has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T07:51:17.953Z"
+  },
+  {
+    "recipient": 2289,
+    "subject": "Post Approved",
+    "message": "Post with ID 77650 has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T07:51:17.953Z"
+  },
+  {
+    "recipient": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'General Post ' with Social Account 'Amul Punjab' has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T09:08:58.814Z"
+  },
+  {
+    "recipient": 2289,
+    "subject": "Post Approved",
+    "message": "Campaign 'General Post ' with Social Account 'Amul Punjab' has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T09:08:58.814Z"
+  },
+  {
+    "recipient": 3327,
+    "clientId": 2775,
+    "designerId": 2289,
+    "campaignId": 79446,
+    "keyManagerId": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Amul Punjab' has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T09:13:19.173Z"
+  },
+  {
+    "recipient": 2289,
+    "clientId": 2775,
+    "designerId": 2289,
+    "campaignId": 79446,
+    "keyManagerId": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Amul Punjab' has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T09:13:19.173Z"
+  },
+  {
+    "recipient": 3327,
+    "clientId": 2775,
+    "designerId": 2289,
+    "campaignId": 79359,
+    "keyManagerId": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'kool' with Social Account 'Amul Punjab' has been rejected and status updated to 'rejected'.",
+    "timestamp": "2024-08-01T09:47:07.447Z"
+  },
+  {
+    "recipient": 2289,
+    "clientId": 2775,
+    "designerId": 2289,
+    "campaignId": 79359,
+    "keyManagerId": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'kool' with Social Account 'Amul Punjab' has been rejected and status updated to 'rejected'.",
+    "timestamp": "2024-08-01T09:47:07.447Z"
+  },
+  {
+    "recipient": 3327,
+    "clientId": 2775,
+    "designerId": 2289,
+    "campaignId": 80433,
+    "keyManagerId": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'General Post' with Social Account 'Amul Punjab' has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T10:32:21.565Z"
+  },
+  {
+    "recipient": 2289,
+    "clientId": 2775,
+    "designerId": 2289,
+    "campaignId": 80433,
+    "keyManagerId": 3327,
+    "subject": "Post Approved",
+    "message": "Campaign 'General Post' with Social Account 'Amul Punjab' has been approved and status updated to 'Done'.",
+    "timestamp": "2024-08-01T10:32:21.565Z"
+  }
+]
