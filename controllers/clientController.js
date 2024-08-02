@@ -525,6 +525,31 @@ const staffDetials = async (req, res) => {
         res.status(500).send(err.message);
     }
 }
+// const staffDetials = async (req, res) => {
+//     try {
+//         let pool = await sql.connect(config);
+        
+//         // Query to get all staff details
+//         let result = await pool.request().query('SELECT * FROM stafdetails');
+        
+//         // Query to find the maximum BasicSalary
+//         let maxSalaryResult = await pool.request().query('SELECT MAX(BasicSalary) AS MaxBasicSalary FROM stafdetails');
+        
+//         // Extract the maximum BasicSalary
+//         let maxBasicSalary = maxSalaryResult.recordset[0].MaxBasicSalary;
+
+//         res.json({
+//             data: result.recordset,
+//             count: result.recordset.length,
+//             maxBasicSalary: maxBasicSalary,
+//             success: true,
+//             message: 'Data fetched successfully'
+//         });
+//     } catch (err) {
+//         res.status(500).send(err.message);
+//     }
+// };
+
 
 // get the staff details by id
 const getStaffDetailsById = async (req, res) => {
@@ -890,7 +915,73 @@ const postCorrectedByClient = async (req, res) => {
 // Ensure notifications file exists on server start
 initializeNotificationsFile();
 
+// async function listTables() {
+//     try {
+//         // Connect to the database
+//         let pool = await sql.connect(config);
 
+//         // Query to list all tables
+//         let result = await pool.request().query(`
+//             SELECT 
+//                 TABLE_SCHEMA, 
+//                 TABLE_NAME 
+//             FROM 
+//                 INFORMATION_SCHEMA.TABLES
+//             WHERE 
+//                 TABLE_TYPE = 'BASE TABLE'
+//             ORDER BY 
+//                 TABLE_SCHEMA, TABLE_NAME;
+//         `);
+
+//         // Output the results
+//         console.log('Tables in the database:');
+//         result.recordset.forEach(row => {
+//             console.log(`${row.TABLE_SCHEMA}.${row.TABLE_NAME}`);
+//         });
+
+//         // Close the database connection
+//         await pool.close();
+//     } catch (err) {
+//         console.error('SQL error', err);
+//     }
+// }
+
+// // Call the function
+// listTables();
+
+// get new staff details
+ const newStaffDetials = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .query('SELECT * FROM StafDetailsNew');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+ }
+
+ const getClientInfoByClientId = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request()
+            .input('ClientID', sql.Int, req.params.clientId)
+            .query('SELECT * FROM clientsRecord WHERE ClientID = @ClientID');
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+ }
 
 module.exports = {
     getClients,
@@ -916,5 +1007,7 @@ module.exports = {
     postApprovedByClient,
     domNotifications,
     postRejectedByClient,
-    postCorrectedByClient
+    postCorrectedByClient,
+    newStaffDetials,
+    getClientInfoByClientId,
 };

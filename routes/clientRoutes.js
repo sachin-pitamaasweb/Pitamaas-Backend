@@ -23,7 +23,9 @@ const {
     postApprovedByClient,
     domNotifications,
     postRejectedByClient,
-    postCorrectedByClient
+    postCorrectedByClient,
+    newStaffDetials,
+    getClientInfoByClientId
 } = require('../controllers/clientController');
 
 const router = express.Router();
@@ -52,6 +54,8 @@ router.get('/staff-details/:id', getStaffDetailsById);
 router.post('/post-approved-by-client', postApprovedByClient);
 router.get('/dom-notifications', domNotifications);
 router.post('/post-reject-by-client', postRejectedByClient);
-
+router.post('/post-corrected-by-client', postCorrectedByClient);
+router.get('/new-staff-detials', newStaffDetials);
+router.get('/client-info/:clientId', getClientInfoByClientId);
 
 module.exports = router;
