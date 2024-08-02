@@ -13,25 +13,25 @@ const getClients = async (req, res) => {
         res.status(500).send(err.message);
     }
 };
-// const getActiveClients = async (req, res) => {
-//     try {
-//         let pool = await sql.connect(config);
-//         let result = await pool.request().query(`
-//             SELECT * 
-//             FROM clientenrollment 
-//             WHERE Status = 'Active' 
-//             ORDER BY SocialAccount ASC
-//         `);
-//         res.json({
-//             data: result.recordset,
-//             count: result.recordset.length,
-//             success: true,
-//             message: 'Data fetched successfully'
-//         });
-//     } catch (err) {
-//         res.status(500).send(err.message);
-//     }
-// };
+const getActiveClient = async (req, res) => {
+    try {
+        let pool = await sql.connect(config);
+        let result = await pool.request().query(`
+            SELECT * 
+            FROM clientenrollment 
+            WHERE Status = 'Active' 
+            ORDER BY SocialAccount ASC
+        `);
+        res.json({
+            data: result.recordset,
+            count: result.recordset.length,
+            success: true,
+            message: 'Data fetched successfully'
+        });
+    } catch (err) {
+        res.status(500).send(err.message);
+    }
+};
 
 // const getActiveClients = async (req, res) => {
 //     try {
@@ -93,11 +93,24 @@ const getActiveClients = async (req, res) => {
             });
         }
 
+        // Map to store credentials by ClientID
+        const credentialsMap = new Map();
+
+        // Generate credentials for each client
         const clientCredentials = clients.map(client => {
+            const { ClientID, SocialAccount } = client;
+
+            // Generate credentials only if not already generated for this ClientID
+            if (!credentialsMap.has(ClientID)) {
+                credentialsMap.set(ClientID, generateCredentials(ClientID, SocialAccount));
+            }
+
+            const credentials = credentialsMap.get(ClientID);
+
             return {
-                clientId: client.ClientID,
-                socialAccount: client.SocialAccount,
-                credentials: generateCredentials(client.ClientID, client.SocialAccount)
+                clientId: ClientID,
+                socialAccount: SocialAccount,
+                credentials
             };
         });
 
@@ -370,7 +383,11 @@ const getClientEnrollmentByClientId = async (req, res) => {
         let pool = await sql.connect(config);
         let result = await pool.request()
             .input('clientId', sql.Int, req.params.clientId)
-            .query('SELECT * FROM ClientEnrollment WHERE ClientId = @clientId');
+            .query(`
+                SELECT * 
+                FROM ClientEnrollment 
+                WHERE ClientId = @clientId AND status = 'active'
+            `);
         res.json({
             data: result.recordset,
             count: result.recordset.length,
@@ -1073,4 +1090,5 @@ module.exports = {
     postCorrectedByClient,
     newStaffDetials,
     getClientInfoByClientId,
+    getActiveClient
 };

@@ -25,7 +25,8 @@ const {
     postRejectedByClient,
     postCorrectedByClient,
     newStaffDetials,
-    getClientInfoByClientId
+    getClientInfoByClientId,
+    getActiveClient
 } = require('../controllers/clientController');
 
 const router = express.Router();
@@ -57,5 +58,6 @@ router.post('/post-reject-by-client', postRejectedByClient);
 router.post('/post-corrected-by-client', postCorrectedByClient);
 router.get('/new-staff-detials', newStaffDetials);
 router.get('/client-info/:clientId', getClientInfoByClientId);
+router.get('/active-client-data', getActiveClient);
 
 module.exports = router;
