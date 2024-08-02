@@ -33,6 +33,47 @@ const getClients = async (req, res) => {
 //     }
 // };
 
+// const getActiveClients = async (req, res) => {
+//     try {
+//         let pool = await sql.connect(config);
+//         let result = await pool.request().query(`
+//             SELECT ClientID, SocialAccount 
+//             FROM clientenrollment 
+//             WHERE Status = 'Active' 
+//             ORDER BY SocialAccount ASC
+//         `);
+
+//         const clients = result.recordset;
+
+//         if (clients.length === 0) {
+//             return res.status(404).json({
+//                 success: false,
+//                 message: 'No active clients found'
+//             });
+//         }
+
+//         const clientCredentials = clients.map(client => {
+//             return {
+//                 clientId: client.ClientID,
+//                 socialAccount: client.SocialAccount,
+//                 credentials: generateCredentials(client.ClientID, client.SocialAccount)
+//             };
+//         });
+
+//         // Save to a JSON file
+//         fs.writeFileSync('client_credentials.json', JSON.stringify(clientCredentials, null, 2));
+
+//         res.json({
+//             data: clientCredentials,
+//             count: clientCredentials.length,
+//             success: true,
+//             message: 'Data fetched and credentials generated successfully'
+//         });
+//     } catch (err) {
+//         res.status(500).send(err.message);
+//     }
+// };
+
 const getActiveClients = async (req, res) => {
     try {
         let pool = await sql.connect(config);
@@ -75,13 +116,35 @@ const getActiveClients = async (req, res) => {
 };
 
 const generateCredentials = (clientId, socialAccount) => {
-    // Logic to generate credentials
-    // This is just a placeholder, you should replace it with actual logic
+    // Replace spaces with underscores or dots in the username
+    const username = socialAccount.replace(/ /g, '_') + `_${clientId}`;
+    // Generate a user-friendly password consisting only of numbers
+    const password = generateNumericPassword(6); // You can adjust the length of the password
+
     return {
-        username: `${socialAccount}_${clientId}`,
-        password: Math.random().toString(36).substring(2, 15) // Random password generation
+        username,
+        password
     };
 };
+
+// Function to generate a numeric password
+const generateNumericPassword = (length) => {
+    let password = '';
+    for (let i = 0; i < length; i++) {
+        password += Math.floor(Math.random() * 10); // Generate a digit between 0 and 9
+    }
+    return password;
+};
+
+
+// const generateCredentials = (clientId, socialAccount) => {
+//     // Logic to generate credentials
+//     // This is just a placeholder, you should replace it with actual logic
+//     return {
+//         username: `${socialAccount}_${clientId}`,
+//         password: Math.random().toString(36).substring(2, 15) // Random password generation
+//     };
+// };
 
 
 // Read the client credentials file once at startup
