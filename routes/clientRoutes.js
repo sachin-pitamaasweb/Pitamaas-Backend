@@ -26,7 +26,23 @@ const {
     postCorrectedByClient,
     newStaffDetials,
     getClientInfoByClientId,
-    getActiveClient
+    getActiveClient,
+    getCurrentMonthFestivals,
+    sendFestivalEmail,
+    updateFestivalData,
+    getClientEnrollmentBySocialAccount,
+    getPostApprovedByClient,
+    getUserLoginDetails,
+    getFestivalNotifications,
+    getBudgetDetails,
+    sendMessage,
+    createChatMessagesTable,
+    getChatMessages,
+    getNextMonthFestivals,
+    getNextMonthFestivalsBasedOnSocialAccount,
+    storeSelectedFestivalAndRemoveFromNotifications,
+    getSelectedFestivalsBasedOnSocialAccount,
+    getSelectedFestivals,
 } = require('../controllers/clientController');
 
 const router = express.Router();
@@ -59,5 +75,22 @@ router.post('/post-corrected-by-client', postCorrectedByClient);
 router.get('/new-staff-detials', newStaffDetials);
 router.get('/client-info/:clientId', getClientInfoByClientId);
 router.get('/active-client-data', getActiveClient);
+router.get('/current-month-festivals', getCurrentMonthFestivals);
+router.get('/send-monthly-notifications', sendFestivalEmail);
+// Define the route for updating festival data
+router.post('/update-festival-data', updateFestivalData);
+router.get('/get-client-enrollment-by-social-account/:socialAccount', getClientEnrollmentBySocialAccount);
+router.get('/post-approved-by-client/:socialAccount', getPostApprovedByClient);
+router.get('/user-login-details', getUserLoginDetails);
+router.get('/festival-notifications', getFestivalNotifications);
+router.get('/budget-details/:socialAccount', getBudgetDetails);
+router.post('/send-message', sendMessage);
+router.post('/create-chat-messages-table', createChatMessagesTable);
+router.get('/chat-messages', getChatMessages);
+router.get('/next-month-festivals', getNextMonthFestivals);
+router.get('/next-month-festivals-based-on-social-account/:socialAccount', getNextMonthFestivalsBasedOnSocialAccount);
+router.post('/store-selected-festival-and-remove-from-notifications', storeSelectedFestivalAndRemoveFromNotifications);
+router.get('/selected-festivals-based-on-social-account/:socialAccount', getSelectedFestivalsBasedOnSocialAccount);
+router.get('/selected-festivals', getSelectedFestivals);
 
 module.exports = router;

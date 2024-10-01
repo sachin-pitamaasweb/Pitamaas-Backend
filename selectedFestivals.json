@@ -1,0 +1,596 @@
+[
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "RSG Exports",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01"
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02"
+      }
+    ]
+  }
+]

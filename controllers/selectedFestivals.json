@@ -1,0 +1,2041 @@
+[
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Music",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Navratri st",
+        "festivalDate": "2024-10-03",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "World Smile",
+        "festivalDate": "2024-10-04",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Teachers",
+        "festivalDate": "2024-10-05",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Noodles Day",
+        "festivalDate": "2024-10-06",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Indian Air Force",
+        "festivalDate": "2024-10-08",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Durga Puja",
+        "festivalDate": "2024-10-09",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Mental Health",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Saraswati Puja",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maha Ashtami",
+        "festivalDate": "2024-10-11",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Girl Child",
+        "festivalDate": "2024-10-11",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dussehra",
+        "festivalDate": "2024-10-12",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Students",
+        "festivalDate": "2024-10-15",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Boss",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Food",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maharishi Valmiki Jayanti",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sangrand",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "PGP Sri Guru Ramdas Ji",
+        "festivalDate": "2024-10-19",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Karva Chauth",
+        "festivalDate": "2024-10-20",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Janamdin Baba Budhaji",
+        "festivalDate": "2024-10-23",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ahoi Ashtami",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Polio",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "JJG Sri Guru Harirai Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "GG Sri Guru Harikrishan Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Pasta Day",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dhanteras",
+        "festivalDate": "2024-10-29",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sardar Patel Jayanti",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Unity Day",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Halloween",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Choti Diwali",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ekta Diwas",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian"
+      },
+      {
+        "festivalName": "International Coffee"
+      },
+      {
+        "festivalName": "International Music"
+      },
+      {
+        "festivalName": "Gandhi Jayanti"
+      },
+      {
+        "festivalName": "Navratri st"
+      },
+      {
+        "festivalName": "World Smile"
+      },
+      {
+        "festivalName": "World Teachers"
+      },
+      {
+        "festivalName": "Noodles Day"
+      },
+      {
+        "festivalName": "Indian Air Force"
+      },
+      {
+        "festivalName": "Durga Puja"
+      },
+      {
+        "festivalName": "World Mental Health"
+      },
+      {
+        "festivalName": "Saraswati Puja"
+      },
+      {
+        "festivalName": "Maha Ashtami"
+      },
+      {
+        "festivalName": "International Girl Child"
+      },
+      {
+        "festivalName": "Dussehra"
+      },
+      {
+        "festivalName": "National Students"
+      }
+    ]
+  },
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Music",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Navratri st",
+        "festivalDate": "2024-10-03",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "World Smile",
+        "festivalDate": "2024-10-04",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Teachers",
+        "festivalDate": "2024-10-05",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Noodles Day",
+        "festivalDate": "2024-10-06",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Indian Air Force",
+        "festivalDate": "2024-10-08",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Durga Puja",
+        "festivalDate": "2024-10-09",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Mental Health",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Saraswati Puja",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maha Ashtami",
+        "festivalDate": "2024-10-11",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Girl Child",
+        "festivalDate": "2024-10-11",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dussehra",
+        "festivalDate": "2024-10-12",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Students",
+        "festivalDate": "2024-10-15",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Boss",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Food",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maharishi Valmiki Jayanti",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sangrand",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "PGP Sri Guru Ramdas Ji",
+        "festivalDate": "2024-10-19",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Karva Chauth",
+        "festivalDate": "2024-10-20",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Janamdin Baba Budhaji",
+        "festivalDate": "2024-10-23",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ahoi Ashtami",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Polio",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "JJG Sri Guru Harirai Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "GG Sri Guru Harikrishan Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Pasta Day",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dhanteras",
+        "festivalDate": "2024-10-29",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sardar Patel Jayanti",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Unity Day",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Halloween",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Choti Diwali",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ekta Diwas",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian"
+      },
+      {
+        "festivalName": "International Coffee"
+      },
+      {
+        "festivalName": "International Music"
+      },
+      {
+        "festivalName": "Gandhi Jayanti"
+      },
+      {
+        "festivalName": "Navratri st"
+      },
+      {
+        "festivalName": "World Smile"
+      },
+      {
+        "festivalName": "World Teachers"
+      },
+      {
+        "festivalName": "Noodles Day"
+      },
+      {
+        "festivalName": "Indian Air Force"
+      },
+      {
+        "festivalName": "Durga Puja"
+      },
+      {
+        "festivalName": "World Mental Health"
+      },
+      {
+        "festivalName": "Saraswati Puja"
+      },
+      {
+        "festivalName": "Maha Ashtami"
+      },
+      {
+        "festivalName": "International Girl Child"
+      },
+      {
+        "festivalName": "Dussehra"
+      },
+      {
+        "festivalName": "National Students"
+      }
+    ]
+  },
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Music",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Navratri st",
+        "festivalDate": "2024-10-03",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "World Smile",
+        "festivalDate": "2024-10-04",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Teachers",
+        "festivalDate": "2024-10-05",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Noodles Day",
+        "festivalDate": "2024-10-06",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Indian Air Force",
+        "festivalDate": "2024-10-08",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Durga Puja",
+        "festivalDate": "2024-10-09",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Mental Health",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Saraswati Puja",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maha Ashtami",
+        "festivalDate": "2024-10-11",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Girl Child",
+        "festivalDate": "2024-10-11",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dussehra",
+        "festivalDate": "2024-10-12",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Students",
+        "festivalDate": "2024-10-15",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Boss",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Food",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maharishi Valmiki Jayanti",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sangrand",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "PGP Sri Guru Ramdas Ji",
+        "festivalDate": "2024-10-19",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Karva Chauth",
+        "festivalDate": "2024-10-20",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Janamdin Baba Budhaji",
+        "festivalDate": "2024-10-23",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ahoi Ashtami",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Polio",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "JJG Sri Guru Harirai Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "GG Sri Guru Harikrishan Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Pasta Day",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dhanteras",
+        "festivalDate": "2024-10-29",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sardar Patel Jayanti",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Unity Day",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Halloween",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Choti Diwali",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ekta Diwas",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian"
+      },
+      {
+        "festivalName": "International Coffee"
+      },
+      {
+        "festivalName": "International Music"
+      },
+      {
+        "festivalName": "Gandhi Jayanti"
+      },
+      {
+        "festivalName": "Navratri st"
+      },
+      {
+        "festivalName": "World Smile"
+      },
+      {
+        "festivalName": "World Teachers"
+      },
+      {
+        "festivalName": "Noodles Day"
+      },
+      {
+        "festivalName": "Indian Air Force"
+      },
+      {
+        "festivalName": "Durga Puja"
+      },
+      {
+        "festivalName": "World Mental Health"
+      },
+      {
+        "festivalName": "Saraswati Puja"
+      },
+      {
+        "festivalName": "Maha Ashtami"
+      },
+      {
+        "festivalName": "International Girl Child"
+      },
+      {
+        "festivalName": "Dussehra"
+      },
+      {
+        "festivalName": "National Students"
+      }
+    ]
+  },
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Music",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Navratri st",
+        "festivalDate": "2024-10-03",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "World Smile",
+        "festivalDate": "2024-10-04",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Teachers",
+        "festivalDate": "2024-10-05",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Noodles Day",
+        "festivalDate": "2024-10-06",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Indian Air Force",
+        "festivalDate": "2024-10-08",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Durga Puja",
+        "festivalDate": "2024-10-09",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Mental Health",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Saraswati Puja",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maha Ashtami",
+        "festivalDate": "2024-10-11",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Girl Child",
+        "festivalDate": "2024-10-11",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dussehra",
+        "festivalDate": "2024-10-12",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Students",
+        "festivalDate": "2024-10-15",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Boss",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Food",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maharishi Valmiki Jayanti",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sangrand",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "PGP Sri Guru Ramdas Ji",
+        "festivalDate": "2024-10-19",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Karva Chauth",
+        "festivalDate": "2024-10-20",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Janamdin Baba Budhaji",
+        "festivalDate": "2024-10-23",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ahoi Ashtami",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Polio",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "JJG Sri Guru Harirai Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "GG Sri Guru Harikrishan Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Pasta Day",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dhanteras",
+        "festivalDate": "2024-10-29",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sardar Patel Jayanti",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Unity Day",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Halloween",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Choti Diwali",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ekta Diwas",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian"
+      },
+      {
+        "festivalName": "International Coffee"
+      },
+      {
+        "festivalName": "International Music"
+      },
+      {
+        "festivalName": "Gandhi Jayanti"
+      },
+      {
+        "festivalName": "Navratri st"
+      },
+      {
+        "festivalName": "World Smile"
+      },
+      {
+        "festivalName": "World Teachers"
+      },
+      {
+        "festivalName": "Noodles Day"
+      },
+      {
+        "festivalName": "Indian Air Force"
+      },
+      {
+        "festivalName": "Durga Puja"
+      },
+      {
+        "festivalName": "World Mental Health"
+      },
+      {
+        "festivalName": "Saraswati Puja"
+      },
+      {
+        "festivalName": "Maha Ashtami"
+      },
+      {
+        "festivalName": "International Girl Child"
+      },
+      {
+        "festivalName": "Dussehra"
+      },
+      {
+        "festivalName": "National Students"
+      }
+    ]
+  },
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "International Music",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Navratri st",
+        "festivalDate": "2024-10-03",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "World Smile",
+        "festivalDate": "2024-10-04",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Teachers",
+        "festivalDate": "2024-10-05",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Noodles Day",
+        "festivalDate": "2024-10-06",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Indian Air Force",
+        "festivalDate": "2024-10-08",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Durga Puja",
+        "festivalDate": "2024-10-09",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Mental Health",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Saraswati Puja",
+        "festivalDate": "2024-10-10",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maha Ashtami",
+        "festivalDate": "2024-10-11",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Girl Child",
+        "festivalDate": "2024-10-11",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dussehra",
+        "festivalDate": "2024-10-12",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Students",
+        "festivalDate": "2024-10-15",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Boss",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Food",
+        "festivalDate": "2024-10-16",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Maharishi Valmiki Jayanti",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sangrand",
+        "festivalDate": "2024-10-17",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "PGP Sri Guru Ramdas Ji",
+        "festivalDate": "2024-10-19",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Karva Chauth",
+        "festivalDate": "2024-10-20",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Janamdin Baba Budhaji",
+        "festivalDate": "2024-10-23",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ahoi Ashtami",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Polio",
+        "festivalDate": "2024-10-24",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "JJG Sri Guru Harirai Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "GG Sri Guru Harikrishan Sahib ji",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "World Pasta Day",
+        "festivalDate": "2024-10-25",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Dhanteras",
+        "festivalDate": "2024-10-29",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Sardar Patel Jayanti",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "National Unity Day",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Halloween",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Choti Diwali",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Ekta Diwas",
+        "festivalDate": "2024-10-31",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {
+        "festivalName": "World Vegetarian"
+      },
+      {
+        "festivalName": "International Coffee"
+      },
+      {
+        "festivalName": "International Music"
+      },
+      {
+        "festivalName": "Gandhi Jayanti"
+      },
+      {
+        "festivalName": "Navratri st"
+      },
+      {
+        "festivalName": "World Smile"
+      },
+      {
+        "festivalName": "World Teachers"
+      },
+      {
+        "festivalName": "Noodles Day"
+      },
+      {
+        "festivalName": "Indian Air Force"
+      },
+      {
+        "festivalName": "Durga Puja"
+      },
+      {
+        "festivalName": "World Mental Health"
+      },
+      {
+        "festivalName": "Saraswati Puja"
+      },
+      {
+        "festivalName": "Maha Ashtami"
+      },
+      {
+        "festivalName": "International Girl Child"
+      },
+      {
+        "festivalName": "Dussehra"
+      },
+      {
+        "festivalName": "National Students"
+      }
+    ]
+  },
+  {
+    "clientID": 2705,
+    "socialAccount": "Yuktam",
+    "message": "Select your October festive creation!",
+    "festivalType": "Festivals",
+    "festivals": [
+      {
+        "festivalName": "World Vegetarian",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": true,
+          "reel": false,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Coffee",
+        "festivalDate": "2024-10-01",
+        "selected": true,
+        "options": {
+          "post": false,
+          "reel": true,
+          "cover": true
+        }
+      },
+      {
+        "festivalName": "International Music 24",
+        "festivalDate": "2024-10-01",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      },
+      {
+        "festivalName": "Gandhi Jayanti 24",
+        "festivalDate": "2024-10-02",
+        "selected": false,
+        "options": {
+          "post": false,
+          "reel": false,
+          "cover": false
+        }
+      }
+    ],
+    "recommendations": [
+      {},
+      {},
+      {},
+      {}
+    ]
+  },
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [],
+    "recommendations": []
+  },
+  {
+    "socialAccount": "Yuktam",
+    "festivals": [],
+    "recommendations": []
+  }
+]

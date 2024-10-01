@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const clientRoutes = require('./routes/clientRoutes');
 const loginRoutes = require('./routes/loginRoutes');
+const newClientRoutes = require('./routes/newClientRoutes');
 
 const app = express();
 
@@ -18,11 +19,13 @@ app.use('/api', clientRoutes);
 // Use the login routes
 app.use('/api', loginRoutes);
 
+// Use the new client routes
+app.use('/api', newClientRoutes);
+
 
 app.get('/', (req, res) => {
     res.send('Welcome to Pitamaas Backend');
 })
-
 
 // post request
 app.post('/pitamaas', (req, res) => {
