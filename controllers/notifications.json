@@ -17008,5 +17008,125 @@
         "festivalDate": "2024-10-15"
       }
     ]
+  },
+  {
+    "recipient": 1199,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84892,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T11:59:54.704Z"
+  },
+  {
+    "recipient": 2263,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84892,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T11:59:54.704Z"
+  },
+  {
+    "recipient": 1199,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84894,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T12:00:08.085Z"
+  },
+  {
+    "recipient": 2263,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84894,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T12:00:08.086Z"
+  },
+  {
+    "recipient": 1199,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84895,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T12:08:22.559Z"
+  },
+  {
+    "recipient": 2263,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84895,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T12:08:22.559Z"
+  },
+  {
+    "recipient": 1199,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84896,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'Cover' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T12:09:08.165Z"
+  },
+  {
+    "recipient": 2263,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84896,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'Cover' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-01T12:09:08.165Z"
+  },
+  {
+    "recipient": 1199,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84898,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-02T07:53:11.925Z"
+  },
+  {
+    "recipient": 2263,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84898,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been approved and the status updated to 'Done'.",
+    "timestamp": "2024-10-02T07:53:11.925Z"
+  },
+  {
+    "recipient": 1199,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84897,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been rejected and status updated to 'rejected'.",
+    "timestamp": "2024-10-02T07:53:41.531Z"
+  },
+  {
+    "recipient": 2263,
+    "clientId": 2705,
+    "designerId": 2263,
+    "campaignId": 84897,
+    "keyManagerId": 1199,
+    "subject": "Post Approved",
+    "message": "Campaign 'General' with Social Account 'Yuktam' has been rejected and status updated to 'rejected'.",
+    "timestamp": "2024-10-02T07:53:41.531Z"
   }
 ]

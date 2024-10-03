@@ -128,16 +128,16 @@ const sendMessage = async (req, res) => {
 // Create the SelectedFestivals table
 const createChatMessagesTable = async (req, res) => {
     try {
-      let pool = await sql.connect(config);
-  
-      // Drop the table if it already exists
-      await pool.request().query(`
+        let pool = await sql.connect(config);
+
+        // Drop the table if it already exists
+        await pool.request().query(`
         IF OBJECT_ID('SelectedFestivals', 'U') IS NOT NULL 
             DROP TABLE SelectedFestivals;
       `);
-  
-      // Create the new SelectedFestivals table
-      await pool.request().query(`
+
+        // Create the new SelectedFestivals table
+        await pool.request().query(`
         CREATE TABLE SelectedFestivals (
           id INT IDENTITY(1,1) PRIMARY KEY,
           clientID INT,
@@ -152,20 +152,20 @@ const createChatMessagesTable = async (req, res) => {
           cover BIT
         );
       `);
-  
-      // Send response indicating success
-      res.json({
-        success: true,
-        message: 'SelectedFestivals table created successfully',
-      });
+
+        // Send response indicating success
+        res.json({
+            success: true,
+            message: 'SelectedFestivals table created successfully',
+        });
     } catch (err) {
-      console.error('Error creating SelectedFestivals table:', err);
-      res.status(500).send(err.message);
+        console.error('Error creating SelectedFestivals table:', err);
+        res.status(500).send(err.message);
     } finally {
-      // Close the SQL connection
-      sql.close();
+        // Close the SQL connection
+        sql.close();
     }
-  };
+};
 
 // Get all chat messages data for a specific user
 const getChatMessages = async (req, res) => {
@@ -1314,7 +1314,7 @@ const getUserLoginDetails = async (req, res) => {
     try {
         let pool = await sql.connect(config);
         let result = await pool.request()
-            .query('SELECT * FROM SelectedFestivals');
+            .query('SELECT * FROM ShortLeaves');
         res.json({
             data: result.recordset,
             count: result.recordset.length,
@@ -1601,96 +1601,96 @@ const storeSelectedFestivalAndRemoveFromNotifications = (req, res) => {
 // Function to get selected festivals based on SocialAccount and update SQL table
 const getSelectedFestivalsBasedOnSocialAccount = async (req, res) => {
     try {
-      // Define the file path for selectedFestivals.json
-      const selectedFestivalsFilePath = path.join(__dirname, 'selectedFestivals.json');
-  
-      // Read the JSON file
-      const rawData = fs.readFileSync(selectedFestivalsFilePath);
-      const festivalsData = JSON.parse(rawData);
-  
-      // Extract data from the JSON based on SocialAccount
-      const socialAccount = req.params.socialAccount;
-      const filteredData = festivalsData.filter(item => item.socialAccount === socialAccount);
-  
-      if (filteredData.length === 0) {
-        return res.status(404).send('No festivals found for the given SocialAccount.');
-      }
-  
-      // Connect to SQL server
-      const pool = await sql.connect(config);
-  
-      // Iterate through filtered data and update SQL table
-      for (const item of filteredData) {
-        for (const festival of item.festivals) {
-          if (festival.selected) {
-            const clientID = item.clientID;
-            const message = item.message;
-            const festivalType = item.festivalType;
-            const selected = festival.selected ? 1 : 0;
-            const post = festival.options.post ? 1 : 0;
-            const reel = festival.options.reel ? 1 : 0;
-            const cover = festival.options.cover ? 1 : 0;
-  
-            // Create a unique festivalName based on a timestamp as placeholder since the original JSON has no names
-            const festivalName =  item.festivalName || new Date().toISOString();
-  
-            // Prepare and execute the SQL query to insert data
-            let result = await pool.request()
-              .input('clientID', sql.Int, clientID)
-              .input('socialAccount', sql.VarChar, socialAccount)
-              .input('message', sql.VarChar, message)
-              .input('festivalType', sql.VarChar, festivalType)
-              .input('festivalName', sql.VarChar, festivalName)
-              .input('festivalDate', sql.Date, new Date()) // Placeholder for actual date if available
-              .input('selected', sql.Bit, selected)
-              .input('post', sql.Bit, post)
-              .input('reel', sql.Bit, reel)
-              .input('cover', sql.Bit, cover)
-              .query(`
+        // Define the file path for selectedFestivals.json
+        const selectedFestivalsFilePath = path.join(__dirname, 'selectedFestivals.json');
+
+        // Read the JSON file
+        const rawData = fs.readFileSync(selectedFestivalsFilePath);
+        const festivalsData = JSON.parse(rawData);
+
+        // Extract data from the JSON based on SocialAccount
+        const socialAccount = req.params.socialAccount;
+        const filteredData = festivalsData.filter(item => item.socialAccount === socialAccount);
+
+        if (filteredData.length === 0) {
+            return res.status(404).send('No festivals found for the given SocialAccount.');
+        }
+
+        // Connect to SQL server
+        const pool = await sql.connect(config);
+
+        // Iterate through filtered data and update SQL table
+        for (const item of filteredData) {
+            for (const festival of item.festivals) {
+                if (festival.selected) {
+                    const clientID = item.clientID;
+                    const message = item.message;
+                    const festivalType = item.festivalType;
+                    const selected = festival.selected ? 1 : 0;
+                    const post = festival.options.post ? 1 : 0;
+                    const reel = festival.options.reel ? 1 : 0;
+                    const cover = festival.options.cover ? 1 : 0;
+
+                    // Create a unique festivalName based on a timestamp as placeholder since the original JSON has no names
+                    const festivalName = item.festivalName || new Date().toISOString();
+
+                    // Prepare and execute the SQL query to insert data
+                    let result = await pool.request()
+                        .input('clientID', sql.Int, clientID)
+                        .input('socialAccount', sql.VarChar, socialAccount)
+                        .input('message', sql.VarChar, message)
+                        .input('festivalType', sql.VarChar, festivalType)
+                        .input('festivalName', sql.VarChar, festivalName)
+                        .input('festivalDate', sql.Date, new Date()) // Placeholder for actual date if available
+                        .input('selected', sql.Bit, selected)
+                        .input('post', sql.Bit, post)
+                        .input('reel', sql.Bit, reel)
+                        .input('cover', sql.Bit, cover)
+                        .query(`
                 INSERT INTO SelectedFestivals (
                   clientID, socialAccount, message, festivalType, festivalName, festivalDate, selected, post, reel, cover
                 ) VALUES (
                   @clientID, @socialAccount, @message, @festivalType, @festivalName, @festivalDate, @selected, @post, @reel, @cover
                 )
               `);
-  
-            console.log(`Festival ${festivalName} inserted successfully for social account ${socialAccount}`);
-          }
-        }
-      }
-  
-      res.send({
-        success: true,
-        message: 'Selected festivals updated successfully',
-        data: filteredData,
-      });
-    } catch (error) {
-      console.error('Error while updating selected festivals:', error);
-      res.status(500).send('Internal Server Error');
-    } finally {
-      // Close SQL connection
-      sql.close();
-    }
-  };
 
-  // get selected festivals based on SocialAccount from sql database
-  const getSelectedFestivals = async (req, res) => {
-    try {
-      // Connect to SQL server
-      const pool = await sql.connect(config);
-  
-      // Get selected festivals based on SocialAccount
-      const socialAccount = req.params.socialAccount;
-      const result = await pool.request()
-        .input('socialAccount', sql.VarChar, socialAccount)
-        .query('SELECT * FROM SelectedFestivals WHERE socialAccount = @socialAccount');
-  
-      res.json(result.recordset);
+                    console.log(`Festival ${festivalName} inserted successfully for social account ${socialAccount}`);
+                }
+            }
+        }
+
+        res.send({
+            success: true,
+            message: 'Selected festivals updated successfully',
+            data: filteredData,
+        });
     } catch (error) {
-      console.error('Error while fetching selected festivals:', error);
-      res.status(500).send('Internal Server Error');
+        console.error('Error while updating selected festivals:', error);
+        res.status(500).send('Internal Server Error');
+    } finally {
+        // Close SQL connection
+        sql.close();
     }
-  };
+};
+
+// get selected festivals based on SocialAccount from sql database
+const getSelectedFestivals = async (req, res) => {
+    try {
+        // Connect to SQL server
+        const pool = await sql.connect(config);
+
+        // Get selected festivals based on SocialAccount
+        const socialAccount = req.params.socialAccount;
+        const result = await pool.request()
+            .input('socialAccount', sql.VarChar, socialAccount)
+            .query('SELECT * FROM SelectedFestivals WHERE socialAccount = @socialAccount');
+
+        res.json(result.recordset);
+    } catch (error) {
+        console.error('Error while fetching selected festivals:', error);
+        res.status(500).send('Internal Server Error');
+    }
+};
 
 // 
 
@@ -2154,6 +2154,6 @@ module.exports = {
     getNextMonthFestivals,
     getNextMonthFestivalsBasedOnSocialAccount,
     storeSelectedFestivalAndRemoveFromNotifications,
-    getSelectedFestivalsBasedOnSocialAccount, 
+    getSelectedFestivalsBasedOnSocialAccount,
     getSelectedFestivals
 };
